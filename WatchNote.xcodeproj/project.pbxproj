@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		EFB475142B51322F00432ADC /* WatchNote Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFB475132B51322F00432ADC /* WatchNote Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFB475192B51322F00432ADC /* WatchNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB475182B51322F00432ADC /* WatchNoteApp.swift */; };
-		EFB4751B2B51322F00432ADC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB4751A2B51322F00432ADC /* ContentView.swift */; };
 		EFB4751D2B51323100432ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB4751C2B51323100432ADC /* Assets.xcassets */; };
 		EFB475202B51323100432ADC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB4751F2B51323100432ADC /* Preview Assets.xcassets */; };
+		EFB4752F2B513B5C00432ADC /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB4752E2B513B5C00432ADC /* NoteModel.swift */; };
+		EFB475322B513BB900432ADC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB475312B513BB900432ADC /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +43,10 @@
 		EFB4750D2B51322F00432ADC /* WatchNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB475132B51322F00432ADC /* WatchNote Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchNote Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB475182B51322F00432ADC /* WatchNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchNoteApp.swift; sourceTree = "<group>"; };
-		EFB4751A2B51322F00432ADC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFB4751C2B51323100432ADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFB4751F2B51323100432ADC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFB4752E2B513B5C00432ADC /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		EFB475312B513BB900432ADC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +80,10 @@
 		EFB475172B51322F00432ADC /* WatchNote Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				EFB475182B51322F00432ADC /* WatchNoteApp.swift */,
-				EFB4751A2B51322F00432ADC /* ContentView.swift */,
-				EFB4751C2B51323100432ADC /* Assets.xcassets */,
+				EFB4752D2B513B3800432ADC /* Assets */,
+				EFB4752C2B513B2F00432ADC /* Models */,
+				EFB4752B2B513B2A00432ADC /* Core */,
+				EFB4752A2B513ADC00432ADC /* App */,
 				EFB4751E2B51323100432ADC /* Preview Content */,
 			);
 			path = "WatchNote Watch App";
@@ -92,6 +95,46 @@
 				EFB4751F2B51323100432ADC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFB4752A2B513ADC00432ADC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EFB475182B51322F00432ADC /* WatchNoteApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EFB4752B2B513B2A00432ADC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EFB475302B513BAD00432ADC /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EFB4752C2B513B2F00432ADC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFB4752E2B513B5C00432ADC /* NoteModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFB4752D2B513B3800432ADC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EFB4751C2B51323100432ADC /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EFB475302B513BAD00432ADC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EFB475312B513BB900432ADC /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFB4751B2B51322F00432ADC /* ContentView.swift in Sources */,
+				EFB475322B513BB900432ADC /* HomeView.swift in Sources */,
+				EFB4752F2B513B5C00432ADC /* NoteModel.swift in Sources */,
 				EFB475192B51322F00432ADC /* WatchNoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
