@@ -69,21 +69,32 @@ struct HomeView: View {
                 .buttonStyle(BorderedButtonStyle(tint: .accentColor))
             }
             Spacer()
-            List{
-                ForEach(notes) {
-                    note in
-                    HStack{
-                        Capsule()
-                            .frame(width: 4)
-                            .foregroundColor(.accentColor)
-                        Text(note.text)
-                            .lineLimit(1)
-                            .padding(.leading, 5)
+            if notes.count >= 1 {
+                List{
+                    ForEach(notes) {
+                        note in
+                        HStack{
+                            Capsule()
+                                .frame(width: 4)
+                                .foregroundColor(.accentColor)
+                            Text(note.text)
+                                .lineLimit(1)
+                                .padding(.leading, 5)
+                        }
+                    }
+                    .onDelete { offset in
+                        deleteNote(offsets: offset)
                     }
                 }
-                .onDelete { offset in
-                    deleteNote(offsets: offset)
-                }
+            } else {
+                Spacer()
+                Image(systemName: "note.text")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.gray)
+                    .opacity(0.25)
+                    .padding(25)
+                Spacer()
             }
         }
         .navigationTitle("WatchNote")
